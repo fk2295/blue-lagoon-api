@@ -14,6 +14,8 @@ class Reservation(db.Model):
     customer_name = db.Column(db.String(100), nullable=False)
     request_time = db.Column(db.String(30), nullable=False)
     status = db.Column(db.String(20), nullable=False, default="Confirmed")
+    total_amount = db.Column(db.Integer, nullable=False)
+    nights = db.Column(db.Integer, nullable=False)
 
     def to_dict(self):
         return {
